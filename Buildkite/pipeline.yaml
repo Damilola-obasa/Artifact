@@ -2,8 +2,11 @@ steps:
  - label: "step 1"
    commands:
       - "mkdir apple"
+      - "mkdir apple2"
       - "touch apple/text.txt"
+      - "touch apple2/text.txt"
       - "buildkite-agent artifact upload apple/text.txt"
+      - "buildkite-agent artifact upload apple2/text.txt"
 
 
    
