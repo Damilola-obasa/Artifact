@@ -8,13 +8,7 @@ steps:
       - "touch apple/text.txt"
       - "buildkite-agent artifact upload apple/text.txt"
       - "exit -1"
-      - "mkdir orange"
-      - "touch orange/text2.txt"
-      - "buildkite-agent artifact upload orange/text2.txt"
-      - "exit -1"
  - wait: ~
    continue_on_failure: true
    
- - label: "Artifact Download with step key"
-   commands:
-      - buildkite-agent artifact download "apple/*.txt" . -—step "step-1" --include-retried-jobs
+
