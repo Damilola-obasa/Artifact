@@ -1,14 +1,10 @@
 steps:
  - label: "step 1"
-   retry:
-      automatic: true
-   key: "step-1"
    commands:
       - "mkdir apple"
       - "touch apple/text.txt"
       - "buildkite-agent artifact upload apple/text.txt"
-      - "exit -1"
- - wait: ~
-   continue_on_failure: true
+
+
    
 
