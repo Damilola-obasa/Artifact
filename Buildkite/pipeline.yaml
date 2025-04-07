@@ -8,6 +8,10 @@ steps:
       - "touch apple/text.txt"
       - "buildkite-agent artifact upload apple/text.txt"
       - "exit -1"
+      - "mkdir orange"
+      - "touch apple/text2.txt"
+      - "buildkite-agent artifact upload orange/text2.txt"
+      - "exit -1"
  - wait: ~
    continue_on_failure: true
    
