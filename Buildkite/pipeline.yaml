@@ -1,12 +1,8 @@
 steps:
-  - env:
-      IMAGE_ID: "xcode-1"
     label: "Build and Upload to TestFlight"
     agents:
-      queue: "mac"
+      queue: "default"
     command: echo " test"
-    plugins:
-    - github.c/automattic/a8c-ci-toolkit-buildkite-plugin#3.9.1:
     artifact_paths:
     - "Beeper.ipa"
     - "*.dSYM.zip"
