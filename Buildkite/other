@@ -1,12 +1,9 @@
 steps:
-  - env:
-      IMAGE_ID: "xcode-16.1"
-    label: "Build and Upload to TestFlight"
-    agents:
-      queue: "mac"
-    command: echo " test"
-    plugins:
-    - github.com/automattic/a8c-ci-toolkit-buildkite-plugin#3.9.1:
-    artifact_paths:
-    - "Beeper.ipa"
-    - "*.dSYM.zip"
+ - label: "step 1"
+   commands:
+      - "mkdir apple"
+      - "mkdir apple2"
+      - "touch apple/text.txt"
+      - "touch apple2/text.txt"
+      - "buildkite-agent artifact upload apple/text.txt"
+      - "buildkite-agent artifact upload apple2/text.txt"
